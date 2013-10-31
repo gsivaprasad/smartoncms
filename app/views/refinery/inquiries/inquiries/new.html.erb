@@ -1,0 +1,83 @@
+<% content_for :body do %>
+<%= raw @page.content_for(Refinery::Pages.default_parts.first.to_sym) if Refinery::Pages.default_parts.any? %>
+
+<div class='inquiries' style="margin-top:150px;margin-left:62px;">
+  <section class="contact-us">
+
+    <div class="row-fluid">
+
+      <div class="span6 contact-form">
+        <%= form_for [refinery, :inquiries, @inquiry] do |f| %>
+        <%= render :partial => "/refinery/admin/error_messages",
+        :locals => {
+         :object => @inquiry,
+         :include_object_name => true
+       } %>
+
+       <div class="control-group">
+        <div class="row">
+          <div class="span6"><label class="control-label" for="inputName"><strong>Name</strong><br><span>Add your name</span></label></div>
+          <div class="span6"><div class="controls">
+            <%= f.text_field :name, :class => 'text input-block-level', :required => 'required',
+            :placeholder => t('name', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders %>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <div class="row">
+          <div class="span6">
+            <label class="control-label" for="inputEmail"><strong>Email</strong><br><span>Add a valid address</span></label>
+          </div>
+          <div class="span6">
+            <div class="controls">
+              <%= f.email_field :email, :class => 'text email input-block-level', :required => 'required',
+              :placeholder => t('email', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="control-group">
+        <div class="row">
+          <div class="span6">
+            <label class="control-label" for="inputPhone"><strong>Phone</strong><br><span>Add valid 10 digit your mobile no.</span></label>
+          </div>
+          <div class="span6">
+            <div class="controls">		
+              <%= f.text_field :phone, :onKeyPress => "NumericCharKeyPress(event);", :class => 'text phone input-block-level', :MaxLength=> 10 ,
+              :placeholder => t('phone', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="control-group">
+        <div class="row">
+          <div class="span6">
+            <label class="control-label" for="inputMsg"><strong>Message</strong><br><span>Write something to us</span></label></div>
+            <div class="span6">
+              <div class="controls">
+                <%= f.text_area :message, :rows => 8, :required => 'required',
+                :placeholder => t('message', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders %>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="control-group">
+          <label class="control-label" for="inputURL">&nbsp;</label>
+          <div class="controls">
+            <input type="submit" value="Send" class="sendBttn">
+          </div>
+        </div>      
+        <% end %>
+      </div>
+    </div>
+  </section>
+</div>
+<% end %>
+<%= render "/refinery/content_page" %>
