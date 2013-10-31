@@ -1,3 +1,11 @@
+PATH
+  remote: lib/plugins
+  specs:
+    refinerycms-inquiries (2.1.0)
+      filters_spam (~> 0.2)
+      refinerycms-core (>= 2.1.0)
+      refinerycms-settings (>= 2.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -54,6 +62,7 @@ GEM
       rack
     erubis (2.7.0)
     execjs (2.0.1)
+    filters_spam (0.3)
     friendly_id (4.0.10.1)
       activerecord (>= 3.0, < 4.0)
     globalize3 (0.3.0)
@@ -147,6 +156,8 @@ GEM
       acts_as_indexed (~> 0.8.0)
       dragonfly (~> 0.9.12)
       refinerycms-core (= 2.1.0)
+    refinerycms-settings (2.1.0)
+      refinerycms-core (~> 2.1.0)
     routing-filter (0.3.1)
       actionpack
     sass (3.2.10)
@@ -184,5 +195,6 @@ DEPENDENCIES
   mysql2
   rails (= 3.2.14)
   refinerycms (= 2.1.0)
+  refinerycms-inquiries (= 2.1.0)!
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)

@@ -15,7 +15,17 @@ Smartoncms::Application.configure do
 
   # Don't care if the mailer can't send
   if config.respond_to?(:action_mailer)
-    config.action_mailer.raise_delivery_errors = false
+    config.action_mailer.perform_deliveries = true
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = {
+	  address:              'smtp.gmail.com',
+	  port:                 587,
+	  domain:               'example.com',
+	  user_name:            'gsp087016',
+	  password:             '08702549912',
+	  authentication:       'plain'
+	 }
+    config.action_mailer.raise_delivery_errors = true
   end
 
   # Print deprecation notices to the Rails logger

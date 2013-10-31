@@ -2,4 +2,18 @@ footer p{
   display:none;	
 }
 
+ .contact-map .contact-address {
+      top: 0;
+    }
+    .contact-us {
+      margin-top: 99px;
+      padding: 30px 0 110px 0;
+      background: #fff;
+      height: auto;
+    }
 
+.p_margin{
+    margin: 20px 30px;
+    width: 582px;
+    font-family: bold;	
+}

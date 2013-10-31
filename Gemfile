@@ -26,6 +26,7 @@ end
 gem 'jquery-rails', '~> 2.3.0'
 
 gem 'refinerycms', '2.1.0'
+gem 'refinerycms-inquiries', '2.1.0', :path => '/home/sivaprasad/smartoncms/lib/plugins'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

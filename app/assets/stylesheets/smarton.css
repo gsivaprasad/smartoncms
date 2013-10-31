@@ -30,11 +30,11 @@ body {
 }
 
 .footer-day-stamp {
-	padding: 8px 15px;
+	padding: 6px 15px 6px 0;
 }
 
 .footer-ticker {
-	padding: 5px 20px;
+	padding: 5px 0;
 }
 
 .footer-ticker ul {
@@ -45,14 +45,13 @@ body {
 
 .footer-ticker li {
 	float: left;
-	height: 53px;
 }
 
 .footer-ticker li > div {
 	background: #fff;
-	padding: 6px 20px;
-	margin: 5px 10px;
-	width: 700px;
+	padding: 4px 20px;
+	/* margin: 5px 10px; */
+	width: 950px;
 	overflow: hidden;
 }
 
@@ -61,7 +60,7 @@ body {
 }
 
 .footer-ticker img {
-	margin-top: 18px;
+	margin-top: 0px;
 }
 
 .footer-links {
@@ -164,6 +163,7 @@ body {
 	text-transform: uppercase;
 	text-align: center;
 	line-height: 15px;
+	margin-top: -10px;
 }
 .people-banner .bulb-logo {
 	background: url('bulb.png') no-repeat;
@@ -465,7 +465,7 @@ Scrolling section about us
 Contact us
 ***********************************************************************************/
 .contact-us {
-	height: 601px;
+	height: 440px;
 	width: 1164px;
 	padding-top: 30px;
 }
@@ -493,7 +493,7 @@ Contact us
 
 .contact-form textarea {
 	border: 1px solid #aacfe4;
-	width: 296px;
+	width: 281px;
 	border-radius: 10px;
 }
 
@@ -509,6 +509,7 @@ Contact us
 	border: 0 solid;
 	color: #fff;
 	font-size: 25px;
+	margin-left:280px;
 }
 
 .contact-us .contact-map img {
@@ -516,7 +517,7 @@ Contact us
 }
 
 .contact-map .contact-address {
-	padding: 20px 26px 0 40px;
+	padding: 20px 26px 0 20px;
 	position: relative;
 	top: -37px;
 	font-weight: bold;
@@ -538,8 +539,22 @@ Contact us
 
 .alignment-social {
 	float: left;
-	top: -53px !important;
-	left: 162px;
+	/* top: -53px !important;
+	left: 162px; */
+	padding-top: 4px;
+}
+
+.alignment-social a {
+	font-size: 18px;
+	color: #fff;
+}
+
+.alignment-social a:hover {
+	text-decoration: none;
+}
+
+.alignment-social img {
+	/* width: 29%; */
 }
 
 /* General List Style */
@@ -1010,5 +1025,3 @@ Contact us
 #twitcker-bar div.box {
 	background: none !important;
 }
-
-	
