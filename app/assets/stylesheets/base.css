@@ -2,7 +2,13 @@ footer p{
   display:none;	
 }
 
- .contact-map .contact-address {
+.p_margin{
+    margin: 20px 30px;
+    width: 582px;
+    font-family: bold;	
+}
+
+.contact-map .contact-address {
       top: 0;
     }
     .contact-us {
@@ -12,8 +18,17 @@ footer p{
       height: auto;
     }
 
-.p_margin{
-    margin: 20px 30px;
-    width: 582px;
-    font-family: bold;	
-}
+      @media (max-width: 360px) {
+        #mobile-banner,
+        #mobile-footer {
+          display: none;
+        }
+
+        .contact-us {
+          margin-top: 0;
+        }
+
+        .contact-form label {
+          text-align: left;
+        }
+      }

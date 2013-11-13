@@ -30,28 +30,33 @@ body {
 }
 
 .footer-day-stamp {
-	padding: 6px 15px 6px 0;
+	padding: 6px 15px;
 }
 
 .footer-ticker {
-	padding: 5px 0;
+	padding-top: 7px;
 }
 
-.footer-ticker ul {
+.footer-SN {
+	padding: 2px 0 5px;
+}
+
+.footer-SN ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
 
-.footer-ticker li {
+.footer-SN li {
 	float: left;
+	margin-right: 10px;
 }
 
 .footer-ticker li > div {
 	background: #fff;
 	padding: 4px 20px;
 	/* margin: 5px 10px; */
-	width: 950px;
+	/* width: 950px; */
 	overflow: hidden;
 }
 
@@ -60,13 +65,17 @@ body {
 }
 
 .footer-ticker img {
-	margin-top: 0px;
+	/* margin-top: 18px; */
 }
 
 .footer-links {
 	background: #fff;
 	line-height: 36px;
 	padding: 0 13px;
+}
+
+.footer-links .span4 {
+	margin-left: 0
 }
 
 .footer-links a {
@@ -152,7 +161,7 @@ body {
 	margin-left: 40px;
 }*/
 .people-banner {
-	width: 757px;
+	max-width: 757px;
 	margin: 0 auto;
 	position: relative;
 }
@@ -162,7 +171,6 @@ body {
 	font-family:Helvetica-Lt;
 	text-transform: uppercase;
 	text-align: center;
-	line-height: 15px;
 	margin-top: -10px;
 }
 .people-banner .bulb-logo {
@@ -304,9 +312,56 @@ Scrolling section about us
 	background-image: url(about_background.png);
 	background-repeat: no-repeat;
 	background-position: 10px center;
-	height: 601px;
-	width: 1164px;
+	/* height: 490px; */
+	/* width: 1164px; */
 	/* margin-top: 250px; */
+	padding-top: 50px;
+}
+
+.about-us > .row-fluid > .span3 {
+	height: 250px;
+}
+
+.about-us > .row-fluid > .span3 > img {
+	border-radius: 999px;
+	border: 12px solid #ddd;
+}
+
+.about-us > .row-fluid > .span3 > div {
+	position: relative;
+	font-family: 'Myriad Pro', sans-serif !important;
+	font-size: 20px;
+	color: #fff;
+	padding: 8px 0;
+	top: -133px;
+	left: 12px;
+	opacity: 0.7;
+	background-color: #000;
+	text-transform: uppercase;
+	text-align: center;
+	width: 78%;
+}
+
+.about-us > .row-fluid > .span3 > .imagehover {
+	margin-top: 10px;
+	position: relative;
+	top: -277px;
+	left: 11px;
+	display: block;
+	background: none;
+	opacity: 0;
+}
+
+.about-us > .row-fluid > .span3 > .imagehover:hover img,
+.about-us > .row-fluid > .span3 > .imagehover:hover
+{
+	display: block;
+	cursor: pointer;
+	opacity: 0.7;
+}
+
+.about-us-bubble {
+	margin-top: 70px;
 }
 
 .about-us ul {
@@ -326,15 +381,6 @@ Scrolling section about us
 .about-us ul li .imagehover img {
 	display: none;
 	margin: 90px;
-}
-
-.about-us ul li:hover .imagehover img,
-.about-us ul li:hover .imagehover,
-.programs .imagehover:hover img, 
-.programs .imagehover:hover
-{
-	display: block;
-	cursor: pointer;
 }
 
 .about-us ul li {
@@ -379,7 +425,7 @@ Scrolling section about us
 
 .slide-bar {
 	width: 100%;
-	top: 124px;
+	top: 133px;
 	left: 0;
 	height: 50px;
 	background-color: #b6caea;
@@ -389,7 +435,7 @@ Scrolling section about us
 
 .carousel-inner > .item h4 {
 	padding-top: 20px;
-	color: #184893;
+	/* color: #184893; */
 	padding-left: 12%;
 }
 
@@ -398,11 +444,13 @@ Scrolling section about us
 }
 
 .carousel-indicators {
-	height: 50px;
-	background-color: #184893;
+	/* height: 50px;
 	top: 0;
 	left: 10%;
-	right: 10%;
+	right: 10%; */
+	margin: auto;
+	position: static;
+	background: #184893;
 }
 
 .blocks:before,
@@ -465,16 +513,18 @@ Scrolling section about us
 Contact us
 ***********************************************************************************/
 .contact-us {
-	height: 440px;
-	width: 1164px;
-	padding-top: 30px;
+	height: 601px;
+	/* width: 1164px; */
+	padding-top: 100px;
 }
 
+/*
 .contact-us .contact-form,
 .contact-us .contact-map {
 	float: left;
 	width: 50%;
 }
+*/
 
 .contact-form label {
 	width: 255px !important;
@@ -486,14 +536,13 @@ Contact us
 
 .contact-form input {
 	border-radius: 10px;
-	width: 296px;
 	height: 25px;
 	border: 1px solid #aacfe4;
 }
 
 .contact-form textarea {
 	border: 1px solid #aacfe4;
-	width: 281px;
+	/* width: 296px; */
 	border-radius: 10px;
 }
 
@@ -509,15 +558,14 @@ Contact us
 	border: 0 solid;
 	color: #fff;
 	font-size: 25px;
-	margin-left:280px;
 }
 
 .contact-us .contact-map img {
-	margin-left: 10px;
+	/* margin-left: 10px; */
 }
 
 .contact-map .contact-address {
-	padding: 20px 26px 0 20px;
+	padding: 20px 26px 0 40px;
 	position: relative;
 	top: -37px;
 	font-weight: bold;
@@ -542,15 +590,6 @@ Contact us
 	/* top: -53px !important;
 	left: 162px; */
 	padding-top: 4px;
-}
-
-.alignment-social a {
-	font-size: 18px;
-	color: #fff;
-}
-
-.alignment-social a:hover {
-	text-decoration: none;
 }
 
 .alignment-social img {
@@ -637,14 +676,14 @@ Contact us
 }
 
 .team-heading h5 {
-	margin-left: 16%;
+	margin-left: 19%;
 }
 
 .founders {
 	color: #444;
 	border-right: 1px solid #d9d7d7;
 	padding: 0 20px;
-	width: 300px !important;
+	max-width: 340px !important;
 }
 
 .founders-nobordr {
@@ -681,6 +720,25 @@ Contact us
 /* our story */
 .our-story img {
 	max-width: 90%;
+}
+
+#founderTab .span,
+#founderTab .span1,
+#founderTab .span5,
+#managementTab .span,
+#managementTab .span1,
+#managementTab .span5,
+#investorTab-1 .span, 
+#investorTab-1 .span1,
+#investorTab-1 .span5, 
+#investorTab-2 .span, 
+#investorTab-2 .span1,
+#investorTab-2 .span5 {
+	margin-left: 0;
+}
+
+#founderTab {
+	height: auto;
 }
 
 /********************************************************************************************
@@ -726,7 +784,7 @@ Contact us
 }
 
 .tab-content {
-	height: 400px;
+	height: 100%;
 	overflow: hidden;
 }
 
@@ -745,7 +803,12 @@ Contact us
 }
 
 .navbar-fixed-top .navbar-inner {
-	border: 1px solid #f1ecec;
+	/* border: 1px solid #f1ecec; */
+}
+
+.team-adv-brd-overflw {
+	height: 280px; 
+	overflow-y: auto;
 }
 
 /********************************************************************************************
@@ -753,15 +816,19 @@ Contact us
  ******************************************************************************************/
  .programs {
 	background: none;	
+	/* min-height: 425px; */
 }
 
 .program-sections {
 	background: #fff;
 	font-size: 13px;
 	color: #444;
+	min-height: 500px;
 }
 
-.program-sections .span3 {
+.program-sections .span3,
+.program-sections .span4
+ {
 	line-height: 18px;
 } 
 
@@ -773,9 +840,11 @@ Contact us
 .programs li {
 	float: left;
 	margin: 30px -5px 0;
+	height: 360px;
 }
 
-.programs li.odd {
+.programs li.odd,
+.programs .span4 .odd {
 	margin-top: -10px;
 }
 
@@ -794,6 +863,43 @@ Contact us
 .programs ul li .imagehover img {
 	display: none;
 	padding: 110px;
+}
+
+.programs > .row-fluid {
+	/* padding-left: 7%; */
+}
+
+.programs > .row-fluid > .span4 {
+	height: 390px;
+}
+
+.programs .bubble-align {
+	margin-left: 10% !important;
+}
+
+.programs .span4 .imagehover {
+	position: relative;
+	top: -332px;
+	left: 31px;
+	display: block;
+	opacity: 0;
+}
+
+.programs .span4 .imagehover img {
+	display: block;
+}
+
+.programs .span4 > div {
+	font-size: 18px;
+	color: #4f4f4f;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.program-bubble-stick {
+	margin: -37px -39px 0 -60px !important;
+	padding: 0;
+	width: 27% !important;
 }
 
 .programs .imagehover:hover img, 
@@ -823,12 +929,20 @@ Contact us
 	background: url('arrow-nav-active.png') no-repeat bottom center;
 }
 
-.carousel-inner > .item h4.programs-hd {
-	color: #f26122;
+.carousel-inner > .item h4.global-sub-hd {
 	font-weight: normal;
 	font-size: 22px;
-	padding: 15px 0 15px 12%;
+	padding: 15px 0 15px 30px;
 }
+
+.sub-hd-programs {
+	color: #f62403;
+}
+
+.sub-hd-about {
+	color: #184893;
+}
+
 
 .programApproachTab-img {
 	text-align: right;
@@ -882,7 +996,7 @@ Contact us
 }
 
 .upcoming-program-bubble:first-child {
-	margin-left: 0;
+	/* margin-left: 0; */
 }
 
 .upcoming-program-bubble:hover {
@@ -900,7 +1014,7 @@ Contact us
 
 .recent-program-arrow {
 	position: relative;
-	left: 104px;
+	left: 169px;
 	top: -1px;
 	background: url('programs/down-arrow.png') no-repeat center center;
 	width: 30px;
@@ -921,6 +1035,22 @@ Contact us
 .upcoming-click-item {
 	display: none;
 }
+
+/********************************************************************************************
+ Platform
+ ******************************************************************************************/
+ .platform {
+ 	border: 1px solid #ff0000;
+ 	background: #fff;
+ }
+
+ .platform-bubble {
+ 	background: #234A88;
+    border: 14px solid #C0BFBF;
+    border-radius: 999px;
+    width: 30%;
+    padding: 57px 30px;
+ }
 
 /********************************************************************************************
  Blog
@@ -1006,14 +1136,14 @@ Contact us
     border-bottom: 0 !important;
     border-top: 0 !important;
     bottom: 51px;
-    box-shadow: -4px 2px 4px rgba(255, 255, 255, 0.25);
+    box-shadow: none !important;
     display: none;
     height: 30px;
     left: 50%;
     overflow: hidden;
     /* position: fixed !important; */
     bottom: 0 !important;
-    width: 500px;
+    max-width: 900px; 
     z-index: 9999;
 }
 
@@ -1024,4 +1154,230 @@ Contact us
 
 #twitcker-bar div.box {
 	background: none !important;
+}
+
+/********************************************************************************************
+ responsive
+ ******************************************************************************************/
+ .navbar-inner {
+ 	background: none !important;
+ }
+
+ .row {
+ 	margin-left: 0 !important;
+ }
+
+ .nav-header {
+ 	background: #fff;
+ 	padding: 0;
+ 	border: 1px solid #e8e8e8;
+ }
+
+.navbar .nav > li > a {
+	margin: 0 55px;
+	padding: 10px 5px;
+}
+
+
+#mobile-footer,
+#mobile-banner {
+	display: none;
+}
+
+#contact-mobile {
+	display: none;
+}
+
+@media (min-width: 800px) and (max-width: 1200px) { 
+
+	.programs ul,
+	.team-heading h5 {
+		margin-left: 0;
+	}
+
+	.programs ul li .imagehover {
+		/* display: none; */
+	}
+
+	.carousel-inner > .item h4.programs-hd,
+	.carousel-inner > .item h4.global-sub-hd {
+		padding-left: 0;
+	}
+
+	.upcoming-program-bubble {
+		max-width: 135px;
+		width: none;
+	}
+
+
+	.about-us ul {
+		margin-left: 0;
+	}
+
+	.about-us ul li.odd, 
+	.team-thumb {
+		margin-top: 0;
+	}
+
+	.carousel-control {
+		margin-top: 330px;
+	}
+
+	.navbar .nav > li > a {
+	margin-left: 10px !important;
+	}
+
+	.programs ul {
+		margin-left: 0;
+	}
+
+	.contact-us {
+		height: inherit;
+		width: inherit;
+	}
+
+	.contact-form label {
+		width: inherit;
+	}
+
+}
+
+@media (max-width: 767px) {
+
+	.programs > .row-fluid > .span4 {
+		width: 31.9149%;
+	}
+
+	.program-bubble-stick {
+		margin: 0 !important;
+		width: 30% !important;
+	}
+
+	.programs .bubble-align {
+		margin-left: 0 !important;
+	}
+
+	.programs > .row-fluid > .span4 {
+		height: auto;
+	}
+
+	.programs .span4 .imagehover {
+		display: none;
+	}
+
+	.about-us > .row-fluid > .span3 > div {
+		max-width: 210px;
+		top: -137px;
+	}
+
+	.about-us > .row > .span2 > .imagehover {
+		top: -276px;
+	}
+
+	.about-us > .row-fluid > .span3 {
+		height: auto;
+		height: 250px;
+		margin-top: 0;
+	}
+
+	.navbar-fixed-top, .navbar-fixed-bottom {
+		position: none;
+	}
+}
+
+@media (min-width: 360px) and (max-width: 767px) {
+	.navbar-fixed-top, .navbar-fixed-bottom {
+		position: fixed;
+	}
+}
+
+@media (max-width: 360px) {
+
+	body {
+		padding-top: 0;
+	}
+
+	#homebanner {
+		display: none;
+	}
+
+	#main-about,
+	#contact-about
+	 {
+		display: none;
+	}
+
+	.slide-bar {
+		display: none;
+	}
+
+	#programs,
+	#footer {
+		display: none;
+	}
+
+	.blog-logo {
+		text-align: center;
+	}
+
+	.people-banner {
+		display: block;
+	}
+
+	.navbar-fixed-top .navbar-inner {
+		border: none;
+	}
+
+	.upcoming-program-bubble {
+		margin-left: 15px;
+	}
+
+	.key-partners-arrow-light1,
+	.key-partners-arrow-light2 {
+		display: none;
+	}
+
+	.key-partners {
+		width: inherit;
+		float: none;
+		border-right: none;
+	}
+
+	.key-partners img {
+		margin-left: 0;
+	}
+
+	.why-smarton p {
+		padding-top: 200px;
+	}
+
+	.why-smarton {
+		width: inherit !important;
+		height: 390px;
+	}
+
+	.why-partner {
+		width: inherit !important;
+		margin-left: 0 !important;
+	}
+
+	.footer-links {
+		position: relative;
+		padding: 0;
+	}
+
+	.contact-map .contact-address:first-child {
+		border-right: none;
+	}
+
+	#mobile-footer,
+	#mobile-banner {
+		display: block;
+	}
+
+	.founders,
+	.digital-program {
+		border-right: none;
+	}
+
 }

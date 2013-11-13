@@ -4613,7 +4613,7 @@ input[type="submit"].btn.btn-mini {
 .navbar .nav > li > a {
   float: none;
   padding: 10px 2px;
-  margin-left: 105px;
+  margin-left: 50px;
   color: #6e6e6e;
   font-size: 15px;
   font-weight: bold;
@@ -6157,7 +6157,6 @@ a.badge:focus {
   position: fixed;
 }
 
-
 /*!
  * Bootstrap Responsive v2.3.2
  *
@@ -7259,6 +7258,15 @@ a.badge:focus {
     padding-right: 10px;
     padding-left: 10px;
   }
+
+  .contact-us {
+    height: auto !important;
+  }
+
+  .contact-map .contact-address {
+    border-right: none !important;
+  }
+
 }
 
 @media (min-width: 980px) {

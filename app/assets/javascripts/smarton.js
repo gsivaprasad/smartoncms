@@ -1,6 +1,8 @@
 $(function(){
+
+
 	$(window).load(function () {
-		$('html, body').stop().animate({ scrollTop: 0}, 1000);
+		//$('html, body').stop().animate({ scrollTop: 0}, 1000);
 	});
 
 	$(".menu-items").click(function(){
@@ -9,32 +11,97 @@ $(function(){
 		if(tabName == '0') 
 			scollIndex= 0;
 
-		// Programms
+		/*
+		//Platform 
 		if(tabName == '2') 
-			scollIndex= 615;
+			scollIndex= 465;
+		*/
 
-		if(tabName == '3') // ABOUT US
-			scollIndex= 1495;
+		// Programms
+		if(tabName == '1') 
+			scollIndex= 545;
+
+		// ABOUT US
+		if(tabName == '3') 
+			scollIndex= 1010;
 
 		// CONTACT US
 		if(tabName == '5') {
-			scollIndex= 2025;
-		} 
+			scollIndex= 1420;
+		}
 
+		var windowSize = $(window).width();
 		$('html, body').stop().animate({ scrollTop: scollIndex}, 1000);
 		$('#main-navbar ul li').removeClass('active');
 		$(this).addClass('active');
 		$('#main-about').show();
 		$('.why-smarton-block').hide();
-		$('#programs').show();
+			
+
+			if(windowSize <= 360) {
+			$('.people-banner').hide();
+			$('#mobile-banner').show();
+			$('#main-about').hide();
+			$('#contact-about').hide();
+			scollIndex= 200;	
+				//Home
+				if(tabName == '0') {
+					$('#mobile-banner').show();
+					$('#programs-mob').hide();
+					$('#about-mob').hide();
+				}
+
+
+				// Programms
+				if(tabName == '2')  {
+					$('#programs').hide();
+					$('html, body').stop().animate({ scrollTop: scollIndex}, 1000);
+					$('#main-navbar').addClass('collapsed');
+					$('#programs-mob').show();
+					$('#footer').hide();
+					$('#mobile-banner').hide();
+				}
+					
+				// ABOUT US
+				if(tabName == '3') {
+					$('html, body').stop().animate({ scrollTop: scollIndex}, 1000);
+					$('#main-navbar').addClass('collapsed');
+					$('#about-mob').show();
+					$('#programs-mob').hide();
+					$('#footer').hide();
+					$('#mobile-banner').hide();
+				}
+					
+				/*
+				// CONTACT US
+				if(tabName == '5') {
+					$('#contact-about').hide();
+					$('html, body').stop().animate({ scrollTop: scollIndex}, 1000);
+					$('#contact-mobile').show();
+					$('#about-mob').hide();
+					$('#programs-mob').hide();
+					$('#footer').hide();
+					$('#mobile-banner').hide();
+				}
+				*/
+
+				
+			} else {
+				$('#programs').show();
+				$('#footer').show();
+				$('#mobile-banner').hide();
+			}
+
+
+			
 		$('.program-sections').hide();
-		$('#footer').show();
+		
 	});
 
-	$("#main-about ul li").click(function(){ 
+	$("#main-about .span3").click(function(){ 
 		$('#footer').hide();
 		//$('#programs').hide();
-		$('html, body').stop().animate({ scrollTop: 1245}, 1000);
+		$('html, body').stop().animate({ scrollTop: 950}, 1000);
 		var index = $(this).children('input').val();
 		$('#why-smartone-block').show();
 		$('#main-about').hide();
@@ -46,15 +113,15 @@ $(function(){
 	});
 
 	$(".slide-bar ol li").click(function(){ 
-		$('html, body').stop().animate({ scrollTop: 1245}, 1000);
+		$('html, body').stop().animate({ scrollTop: 950}, 1000);
 		$('#myTab a:first').tab('show');
 		$('#whyPartnerTab a:first').tab('show');
 	});
 
 	// programs 
-	$("#programs ul li").click(function(){ 
+	$("#programs .span4").click(function(){ 
 		$('#footer').hide();
-		$('html, body').stop().animate({ scrollTop: 450}, 1000);
+		$('html, body').stop().animate({ scrollTop: 425}, 1000);
 		var index = $(this).children('input').val();
 		$('#program-section').show();
 		$('#programs').hide();
@@ -66,7 +133,7 @@ $(function(){
 	});
 
 	$(".programs-slide-bar ol li").click(function(){ 
-		$('html, body').stop().animate({ scrollTop: 450}, 1000);
+		$('html, body').stop().animate({ scrollTop: 425}, 1000);
 		$('#myTab a:first').tab('show');
 		//$('#whyPartnerTab a:first').tab('show');
 	});
@@ -87,26 +154,24 @@ $(function(){
 		var position = $(window).scrollTop();
 		//alert(position);
 		if(position >= 300) {
-			$('#header').addClass('header-transparent');
+			$('#header-inner').addClass('header-transparent');
 		} else {
-			$('#header').removeClass('header-transparent');
+			$('#header-inner').removeClass('header-transparent');
 		}
 
-	
-		if(position <= 350 || position >= 1050) {
+
+		if(position <= 350 || position >= 850) {
 			$('#program-nav').hide();
 		} else {
 			$('#program-nav').show();
 		}
 		
+		
 
-		if(position <= 1000 || position >=1700)
+		if(position <= 900 || position >=1500)
 			$('#about-nav').hide();
 		else
 			$('#about-nav').show();
-
-	
-
 	});
 
 	//upcoming program click item 
@@ -117,6 +182,18 @@ $(function(){
 		$('.upcoming-click-item').show();
 
 	});
+
+
+//refresh page on browser resize
+$(window).bind('resize', function(e)
+{
+	if (window.RT) clearTimeout(window.RT);
+	window.RT = setTimeout(function()
+	{
+		this.location.reload(false);
+	}, 200);
+});
+
 
 });
 
@@ -141,4 +218,5 @@ $(function() {
 		myTabsActive = index;
 	}
 })
+
 
