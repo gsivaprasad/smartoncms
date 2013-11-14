@@ -46,7 +46,7 @@
           </div>
           <div class="span6">
             <div class="controls">		
-              <%= f.text_field :phone, :onKeyPress => "NumericCharKeyPress(event);", :class => 'text phone input-block-level', :MaxLength=> 10 ,
+              <%= f.text_field :phone, :onKeyPress => "return NumericCharKeyPress(event);", :class => 'text phone input-block-level', :MaxLength=> 10 ,
               :placeholder => t('phone', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders %>
             </div>
           </div>
