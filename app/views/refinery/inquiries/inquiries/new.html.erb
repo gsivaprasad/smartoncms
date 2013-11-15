@@ -1,8 +1,8 @@
 <% content_for :body do %>
 <%= raw @page.content_for(Refinery::Pages.default_parts.first.to_sym) if Refinery::Pages.default_parts.any? %>
 
-<div class='inquiries' style="margin-top:150px;margin-left:62px;">
-  <section class="contact-us">
+<div class='inquiries' style="margin-top:100px;">
+  <section class="contact-us"  id="contact-us">
 
     <div class="row-fluid">
 
@@ -60,7 +60,7 @@
             <label class="control-label" for="inputMsg"><strong>Message</strong><br><span>Write something to us</span></label></div>
             <div class="span6">
               <div class="controls">
-                <%= f.text_area :message, :rows => 8, :required => 'required',
+                <%= f.text_area :message, :rows => 4, :class => "input-block-level", :required => 'required',
                 :placeholder => t('message', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders %>
               </div>
             </div>
@@ -69,11 +69,17 @@
 
 
         <div class="control-group">
-          <label class="control-label" for="inputURL">&nbsp;</label>
-          <div class="controls">
-            <input type="submit" value="Send" class="sendBttn">
+          <div class="row">
+            <div class="span6">
+              <label class="control-label" for="inputURL">&nbsp;</label></div>
+              <div class="span6">          
+                <div class="controls">
+                  <input type="submit" value="Send" class="input-block-level sendBttn">
+                </div>
+              </div>
+            </div>
           </div>
-        </div>      
+        </div>
         <% end %>
       </div>
     </div>
