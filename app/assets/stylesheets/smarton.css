@@ -514,21 +514,7 @@ Contact us
 ***********************************************************************************/
 .contact-us {
 	height: 601px;
-	/* width: 1164px; */
-	padding-top: 30px;
-	background: #fff;
-}
-
-.contact-us-cms-page {
-	position: fixed;
-	width: 100%;
-	margin-top: -1px;
-}
-
-.contact-us-map-cms {
-	position: absolute;
-    right: 25px;
-    top: 165px;
+	/* width: 1164px; */	
 }
 
 /*
@@ -892,7 +878,7 @@ Contact us
 
 .programs .span4 .imagehover {
 	position: relative;
-	top: -332px;
+	top: -341px;
 	left: 31px;
 	display: block;
 	opacity: 0;
@@ -902,11 +888,14 @@ Contact us
 	display: block;
 }
 
-.programs .span4 > div {
-	font-size: 18px;
+.programs .span4 > div,
+.hw-it-wrks .span4 > div {
+	font-size: 14px;
 	color: #4f4f4f;
 	text-transform: uppercase;
 	text-align: center;
+	width: 300px;
+	padding-top: 5px;
 }
 
 .program-bubble-stick {
@@ -1170,8 +1159,60 @@ Contact us
 }
 
 /********************************************************************************************
+ How it works
+ *******************************************************************************************/
+.hw-it-wrks {
+	padding-top:80px;
+}
+
+.hw-it-wrks > .row-fluid > .span4 {
+	height: 420px;
+}
+
+.hw-it-wrks .span4 .imagehover {
+	position: relative;
+	top: -304px;
+	left: 18px;
+	display: block;
+	opacity: 0;
+}
+
+.hw-it-wrks .imagehover:hover img, 
+.hw-it-wrks .imagehover:hover
+{
+	display: block;
+	cursor: pointer;
+	opacity: 0.7;
+}
+
+.hwitworks-sections {
+	background: #fff;
+	font-size: 13px;
+	color: #444;
+	min-height: 500px;
+}
+
+.delivery-platform {
+	padding-left: 30px;
+}
+
+.delivery-platform > h5 {
+	color: #f62403;
+	font-size: 16px;
+	font-weight: normal;
+}
+
+.delivery-platform-diagram {
+	margin-top: 40px;
+}
+
+.embedded-program-list {
+	margin-top: 20px;
+}
+
+/********************************************************************************************
  responsive
- ******************************************************************************************/
+ *******************************************************************************************/
  .navbar-inner {
  	background: none !important;
  }
@@ -1257,8 +1298,10 @@ Contact us
 
 @media (max-width: 767px) {
 
-	.programs > .row-fluid > .span4 {
+	.programs > .row-fluid > .span4,
+	.hw-it-wrks > .row-fluid > .span4 {
 		width: 31.9149%;
+		height: auto;
 	}
 
 	.program-bubble-stick {
@@ -1270,11 +1313,8 @@ Contact us
 		margin-left: 0 !important;
 	}
 
-	.programs > .row-fluid > .span4 {
-		height: auto;
-	}
-
-	.programs .span4 .imagehover {
+	.programs .span4 .imagehover,
+	.hw-it-wrks .span4 .imagehover {
 		display: none;
 	}
 
@@ -1315,8 +1355,8 @@ Contact us
 	}
 
 	#main-about,
-	#contact-about
-	 {
+	#contact-about,
+	#hwItWrks {
 		display: none;
 	}
 
@@ -1325,7 +1365,8 @@ Contact us
 	}
 
 	#programs,
-	#footer {
+	#footer,
+	#hwItWrks {
 		display: none;
 	}
 

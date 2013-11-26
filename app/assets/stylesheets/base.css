@@ -2,6 +2,23 @@ footer p{
   display:none;	
 }
 
+.contact-us {	
+	padding-top: 30px;
+	background: #fff;
+}
+
+.contact-us-cms-page {
+	position: fixed;
+	width: 100%;
+	margin-top: -1px;
+}
+
+.contact-us-map-cms {
+	position: absolute;
+    right: 25px;
+    top: 165px;
+}
+
 .p_margin{
     max-width: 540px;
     margin: 20px 90px;

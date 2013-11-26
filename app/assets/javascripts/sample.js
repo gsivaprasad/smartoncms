@@ -2,6 +2,7 @@ $(document).ready(function(){
   $('#body_content_title').hide();
   $('#program-section').css("display","none");
   $('#myTab1').css("display","none");
+  $('#hwitworks-section').css("display","none");
   $('#why-smartone-block').css("display","none");
   $('#myTab').css("display","none");
   $('#keypartnersTab').css("display","none");
@@ -12,13 +13,18 @@ $(document).ready(function(){
   if(sub_menu == "main-about"){
     $('#main-navbar ul li').removeClass('active');
     $('#abt').addClass('active');
-   $(window).scrollTop($("#main-about").offset().top-100);
+   $(window).scrollTop($("#main-about").offset().top-110);
  }
  if(sub_menu == "programs"){
    $('#main-navbar ul li').removeClass('active');
    $('#prgs').addClass('active');
    $(window).scrollTop($("#programs").offset().top-50);
  }
+ if(sub_menu == "how-it-works"){
+   $('#main-navbar ul li').removeClass('active');
+   $('#hwitwk').addClass('active');
+   $(window).scrollTop($("#hwItWrks").offset().top-70);
+ } 
 });
 
 function NumericCharKeyPress(evt){
