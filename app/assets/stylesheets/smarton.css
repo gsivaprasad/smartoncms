@@ -514,7 +514,8 @@ Contact us
 ***********************************************************************************/
 .contact-us {
 	height: 601px;
-	/* width: 1164px; */	
+	/* width: 1164px; */
+	padding-top: 100px;
 }
 
 /*
@@ -1171,8 +1172,8 @@ Contact us
 
 .hw-it-wrks .span4 .imagehover {
 	position: relative;
-	top: -304px;
-	left: 18px;
+	top: -300px;
+	left: 16px;
 	display: block;
 	opacity: 0;
 }
