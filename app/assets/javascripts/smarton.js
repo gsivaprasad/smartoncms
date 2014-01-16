@@ -182,7 +182,7 @@ $(function(){
 		var position = $(window).scrollTop();
 		
 		//alert(position);
-		if(position >= 300) {
+		if(position >= 65) {
 			$('#header-inner').addClass('header-transparent');
 		} else {
 			$('#header-inner').removeClass('header-transparent');
@@ -232,6 +232,16 @@ $(window).bind('resize', function(e)
 	{
 		this.location.reload(false);
 	}, 200);
+});
+
+//home page popup 
+ $("#bannerPopup").hide();
+setTimeout(function(){
+   $("#bannerPopup").fadeIn(1000);
+},1500);
+
+$('#landingPopupClose').click(function() {
+    $(this).parent().hide();
 });
 
 
