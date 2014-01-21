@@ -1,4 +1,6 @@
 @font-face {font-family:Helvetica-Lt; src:url("fonts/Helvetica-LT-Std-Condensed_22476.ttf");}
+@font-face {font-family:MyriadPro-Regular; src:url("fonts/MYRIADPRO-REGULAR.OTF");}
+@font-face {font-family:MyriadPro-Bold; src:url("fonts/MYRIADPRO-BOLD.OTF");}
 * {
 	margin: 0;
 	padding: 0;
@@ -1433,4 +1435,57 @@ Contact us
 		border-right: none;
 	}
 
+}
+
+/*Rignt Panel ---- Suvarna*/
+
+#sidePanel {
+position:fixed;
+right:0px;
+top:30%;
+z-index: 1000;
+}
+
+#panelHandle {
+background: #f26122;
+height:170px;
+width:35px;
+float:left;
+cursor:pointer;
+border-radius: 15px 0 0 15px;
+}
+.rotate {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    width: 170px;
+    height: 155px;
+    font-family: 'Myriad Pro',sans-serif !important;
+    font-weight: bold;
+}
+
+#panelContent {
+float:left;
+width:290px;
+height:170px;
+}
+
+.innerCont-hover {
+background:none repeat scroll 0 0 #fcfbfb;
+border: 2px solid #f26122;
+font-family:'Open Sans',arial,sans-serif;
+font-weight:400;
+overflow:hidden;
+border-right: none;
+border-left: none;
+height: 166px;
+}
+
+.innerCont-hover p { 
+    font-family: MyriadPro-Regular !important;
+    font-size: 12px;
+    padding: 18px 9px;
+    line-height: 1.2em;  
 }

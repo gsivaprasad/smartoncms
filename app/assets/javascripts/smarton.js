@@ -220,7 +220,30 @@ $(function(){
 		$('.upcoming-click-item').show();
 
 	});
+	// Right Panel - pop out -- Suvarna
+	$('#panelHandle').hover(function() {
+			$('#sidePanel').stop(true, false).animate({
+				'right': '0px'
+			}, 900);
+		}, function() {
+		});
 
+		$('#sidePanel').hover(function() {
+
+		}, function() {
+
+			$('#sidePanel').animate({
+				right: '-290px'
+			}, 800);
+
+		});
+
+        $(window).scroll(function() {
+            $('#sidePanel').animate({
+				right: '-290px'
+			}, 800);
+        });
+      // END  
 
 
 
