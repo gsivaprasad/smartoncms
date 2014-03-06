@@ -42,3 +42,5 @@ gem 'refinerycms-inquiries', '2.1.0', :path => '/home/sivaprasad/smartoncms/lib/
 
 # To use debugger
 # gem 'debugger'
+
+gem 'refinerycms-sign_ups', :path => 'vendor/extensions'
