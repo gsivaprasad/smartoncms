@@ -1,0 +1,16 @@
+<li class='clearfix record <%= cycle("on", "on-hover") %>'>
+  <span class='title'>
+    <%= link_to sign_up.name, refinery.sign_ups_admin_sign_up_path(sign_up) %> <%= t('.said') %>
+    <span class="preview"><%= truncate(strip_tags(sanitize(sign_up.message)), :length => 60) -%></span>
+  </span>
+  <span class='actions'>
+    <%= link_to refinery_icon_tag('delete.png'), refinery.sign_ups_admin_sign_up_path(sign_up),
+                :class => "cancel confirm-delete",
+                :title => t('admin.sign_ups.delete'),
+                :'data-confirm' => t('shared.admin.delete.message', :title => sign_up.name),
+                :'data-method' => "delete" -%>
+
+    <%= link_to refinery_icon_tag('zoom.png'), refinery.sign_ups_admin_sign_up_path(sign_up),
+                :title => t('.read_sign_up') -%>
+  </span>
+</li>

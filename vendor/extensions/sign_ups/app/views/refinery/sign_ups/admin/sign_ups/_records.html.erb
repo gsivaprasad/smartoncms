@@ -1,0 +1,23 @@
+<%= render 'refinery/admin/search_header', :url => refinery.sign_ups_admin_sign_ups_path %>
+<% if searching? %>
+  <% if @sign_ups.any? %>
+    <ul>
+      <%= render :partial => 'sign_up', :collection => @sign_ups %>
+    </ul>
+  <% else %>
+    <p><%= t('no_results', :scope => 'refinery.admin.search') %></p>
+  <% end %>
+<% else %>
+  <% if @grouped_sign_ups.any? -%>
+    <% @grouped_sign_ups.each do |container| %>
+      <h3><%= l((sign_up_group = container.last).first.created_at, :format => :short) %></h3>
+      <ul>
+        <%= render :partial => 'sign_up', :collection => sign_up_group %>
+      </ul>
+    <% end %>
+  <% else -%>
+    <p>
+      <strong><%= t('no_sign_ups', :scope => 'refinery.sign_ups.admin.sign_ups.index') %></strong>
+    </p>
+  <% end -%>
+<% end %>

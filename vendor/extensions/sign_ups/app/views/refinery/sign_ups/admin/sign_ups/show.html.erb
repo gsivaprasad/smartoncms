@@ -1,0 +1,91 @@
+<div id='records'>
+  <h2><%= t('.sign_up') %></h2>
+  <table id='sign_up' class='inquiry'>
+      <tr>
+        <td>
+          <strong>
+            <%= t('.name', :default => t('activerecord.attributes.sign_up.name')) %>
+          </strong>
+        </td>
+        <td>
+          <%= @sign_up.name %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
+            <%= t('.email', :default => t('activerecord.attributes.sign_up.email')) %>
+          </strong>
+        </td>
+        <td>
+          <%= @sign_up.email %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
+            <%= t('.country', :default => t('activerecord.attributes.sign_up.country')) %>
+          </strong>
+        </td>
+        <td>
+          <%= @sign_up.country %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
+            <%= t('.city', :default => t('activerecord.attributes.sign_up.city')) %>
+          </strong>
+        </td>
+        <td>
+          <%= @sign_up.city %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
+            <%= t('.occupation', :default => t('activerecord.attributes.sign_up.occupation')) %>
+          </strong>
+        </td>
+        <td>
+          <%= @sign_up.occupation %>
+        </td>
+      </tr>
+      <tr>
+        <td valign='top'>
+          <strong>
+            <%= t('.message', :default => t('activerecord.attributes.sign_up.message')) %>
+          </strong>
+        </td>
+        <td>
+          <p style='margin-top: 0px'>
+            <% @sign_up.message.to_s.gsub("\r\n\r\n", "\r\n").split("\r\n").each_with_index do |sentence, index| %>
+              <%=raw "</p><p>" unless index == 0 %>
+              <%= sentence %>
+            <% end %>
+          </p>
+        </td>
+      </tr>
+  </table>
+</div>
+<div id='actions'>
+  <h2><%= t('.details')%></h2>
+  <p>
+    <strong><%= t('.age') %>:</strong> <%= time_ago_in_words(@sign_up.created_at) %>
+  </p>
+  <h2><%= t('.actions') %></h2>
+  <ul>
+    <li>
+      <%= link_to t('.back_to_all_sign_ups'), refinery.url_for(:action => 'index'),
+                   :class => "back_icon" %>
+    </li>
+    <li>
+      <%= link_to t('delete', :scope => 'refinery.sign_ups.admin.sign_ups'),
+                  refinery.sign_ups_admin_sign_up_path(@sign_up),
+                  :class => 'delete_icon no-tooltip confirm-delete',
+                  :title => t('delete', :scope => 'refinery.sign_ups.admin.sign_ups'),
+                  :'data-confirm' => t('message', :scope => 'refinery.admin.delete', :title => @sign_up.name),
+                  :'data-method' => "delete" %>
+    </li>
+  </ul>
+</div>

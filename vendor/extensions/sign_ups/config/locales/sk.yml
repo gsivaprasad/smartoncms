@@ -1,0 +1,81 @@
+sk:
+  refinery:
+    plugins:
+      sign_ups:
+        title: Sign Ups
+        description: Poskytuje kontaktný formulár a zaznamenáva sign ups
+    sign_ups:
+      sign_ups:
+        new:
+          send: Odoslať správu
+          privacy_policy: Chránime vaše súkromie
+      admin:
+        sign_ups:
+          delete: Trvalo odstrániť sign up
+          sign_up:
+            read_sign_up: Prečítať sign up
+            said: povedal
+            mark_as_spam: Označiť ako spam
+            mark_as_ham: Označiť ako prečítané
+          submenu:
+            inbox: Inbox
+            spam: Spam
+            update_notified: Upraviť zoznam notifikovaných
+            edit_confirmation_email: Upraviť potvrdzovací e-mail
+          index:
+            no_sign_ups: Zatiaľ ste neobdržali žiadne sign ups.
+          spam:
+            no_spam: Hurá! Nemáte žiaden spam.
+          show:
+            details: Podrobnosti
+            age: Vek
+            actions: Akcie
+            back_to_all_sign_ups: Späť na všetky sign ups
+            spam: Spam
+            spam_yes: 'áno'
+            sign_up: Sign Up
+            to: Komu
+            from: Od
+            click_to_email: Kliknite pre odoslanie tejto adresy e-mailom
+            phone: Telefón
+            date: Dátum
+            message: Správa
+        settings:
+          notification_recipients_form:
+            settings_value_name: Poslať upozornenie pre
+            explanation: Zakaždým, keď Vás niekto kontaktuje cez vaše webové stránky, Refinery odošle e-mail s upozornením na nový sign up.
+            hint: Keď je odoslaný nový sign up, Refinery odošle upozornenie na Váš e-mail.
+            example: "Zadajte e-mailovú adresu(y) ako: jack@work.com, jill@office.com"
+          confirmation_email_form:
+            to: Komu
+            from: Od
+            subject: Predmet
+            click_to_edit_subject: Kliknite tu ak chcete upraviť predmet
+            explanation: Zakaždým, keď Vás niekto kontaktuje cez vaše webové stránky, Refinery odošle e-mail s potvrdením o prijatí odosielateľovi sign up.
+            below_edit_email_sent: Nižšie môžete upraviť e-mail, ktorý je odosielaný.
+            the_customer_making_sign_up: Klient robiť sign up
+            message: Správa
+            note: "Poznámka: umiestniťe text %name%, pre určenie pozície mena klienta v e-maile"
+      mailer:
+        notification:
+          greeting: Ahoj
+          you_recieved_new_sign_up: Práve ste obdržali nový sign up na vašej webové stránke.
+          sign_up_starts: --- sign up začiatok ---
+          sign_up_ends: --- sign up koniec ---
+          from: Od
+          email: E-mail
+          phone: Telefón
+          message: Správa
+          closing_line: S pozdravom
+          ps_html: P.S. Všetky vaše sign ups sú uložené v "Sign Ups" sekcii v Refinery, ak by ste ich chceli zobraziť neskôr.
+  activerecord:
+    models:
+      sign_up: Sign Up
+    attributes:
+      sign_up:
+        name: Name
+        email: Email
+        country: Country
+        city: City
+        occupation: Occupation
+        message: Message

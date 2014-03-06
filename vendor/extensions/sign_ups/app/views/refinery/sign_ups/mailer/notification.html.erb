@@ -1,0 +1,20 @@
+<%= t('.greeting') %>,<br/>
+<br/>
+<%= t('.you_recieved_new_sign_up') %><br/>
+<br/>
+<%= t('.sign_up_starts') %><br/>
+<br/>
+<%= t('.name', :default => t('activerecord.attributes.sign_up.name')) %>: <%= @sign_up.name %><br/>
+<%= t('.email', :default => t('activerecord.attributes.sign_up.email')) %>: <%= @sign_up.email %><br/>
+<%= t('.country', :default => t('activerecord.attributes.sign_up.country')) %>: <%= @sign_up.country %><br/>
+<%= t('.city', :default => t('activerecord.attributes.sign_up.city')) %>: <%= @sign_up.city %><br/>
+<%= t('.occupation', :default => t('activerecord.attributes.sign_up.occupation')) %>: <%= @sign_up.occupation %><br/>
+<%= t('.message', :default => t('activerecord.attributes.sign_up.message')) %>: 
+<%= @sign_up.message %>
+<br/>
+<%= t('.sign_up_ends') %><br/>
+<br/>
+<%= t('.closing_line') %>,<br/>
+<%= Refinery::Core.site_name %><br/>
+<br/>
+<%= t('.ps_html') %>

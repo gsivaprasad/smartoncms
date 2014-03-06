@@ -1,0 +1,22 @@
+<div id='actions'>
+  <ul>
+    <% if ::Refinery::SignUps::Admin::SignUpsController.searchable? %>
+      <li>
+        <%= render '/refinery/admin/search', :url => refinery.sign_ups_admin_sign_ups_path %>
+      </li>
+    <% end %>
+    <li <%= "class='selected'" if params[:action] == "index" %>>
+      <%= link_to t('.inbox'), refinery.sign_ups_admin_sign_ups_path, :class => "email_icon" %>
+    </li>
+    <li>
+      <%= link_to t('.update_notified'),
+                    refinery.edit_sign_ups_admin_setting_path(:sign_up_notification_recipients, :dialog => true, :height => 300),
+                    :class => "user_comment_icon" %>
+    </li>
+    <li>
+      <%= link_to t('.edit_confirmation_email'),
+                  refinery.edit_sign_ups_admin_setting_path(:sign_up_confirmation_body, :dialog => true),
+                  :class => "edit_email_icon" %>
+    </li>
+  </ul>
+</div>

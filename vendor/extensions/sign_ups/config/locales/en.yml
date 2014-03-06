@@ -1,0 +1,81 @@
+en:
+  refinery:
+    plugins:
+      sign_ups:
+        title: Sign Ups
+        description: Provides a contact form and stores sign ups
+    sign_ups:
+      sign_ups:
+        new:
+          send: Send message
+          privacy_policy: We value your privacy
+      admin:
+        sign_ups:
+          delete: Remove this sign up forever
+          sign_up:
+            read_sign_up: Read the sign up
+            said: said
+            mark_as_spam: Mark as spam
+            mark_as_ham: Move to inbox
+          submenu:
+            inbox: Inbox
+            spam: Spam
+            update_notified: Update who gets notified
+            edit_confirmation_email: Edit confirmation email
+          index:
+            no_sign_ups: You have not received any sign ups yet.
+          spam:
+            no_spam: Hooray! You don't have any spam.
+          show:
+            details: Details
+            age: Age
+            actions: Actions
+            back_to_all_sign_ups: Back to all sign ups
+            spam: Spam
+            spam_yes: 'yes'
+            sign_up: Sign Up
+            to: To
+            from: From
+            click_to_email: Click to email this address
+            phone: Phone
+            date: Date
+            message: Message
+        settings:
+          notification_recipients_form:
+            settings_value_name: Send notifications to
+            explanation: Every time someone contacts you on your website, Refinery sends out an email to say there is a new sign up.
+            hint: When a new sign up is submitted, Refinery will send an email notification to you.
+            example: "Enter your email address(es) like: jack@work.com, jill@office.com"
+          confirmation_email_form:
+            to: To
+            from: From
+            subject: Subject
+            click_to_edit_subject: Click here to edit the subject
+            explanation: Every time someone contacts you on your website, Refinery sends out an email to confirm the sign up with the person who made it.
+            below_edit_email_sent: Below you can edit the email that is sent out.
+            the_customer_making_sign_up: The customer making the sign up
+            message: Message
+            note: "Note: place the text %name% where you'd like the customer's name to appear in the email"
+      mailer:
+        notification:
+          greeting: Hi there
+          you_recieved_new_sign_up: You just received a new sign up on your website.
+          sign_up_starts: --- sign up starts ---
+          sign_up_ends: --- sign up ends ---
+          from: From
+          email: Email
+          phone: Phone
+          message: Message
+          closing_line: Kind Regards
+          ps_html: P.S. All your sign ups are stored in the "Sign Ups" section of Refinery should you ever want to view it later there.
+  activerecord:
+    models:
+      sign_up: Sign Up
+    attributes:
+      sign_up:
+        name: Name
+        email: Email
+        country: Country
+        city: City
+        occupation: Occupation
+        message: Message
