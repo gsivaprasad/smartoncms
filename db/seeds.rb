@@ -11,3 +11,5 @@ Refinery::Pages::Engine.load_seed
 
 # Added by Refinery CMS Inquiries engine
 Refinery::Inquiries::Engine.load_seed
+
+Refinery::SignUps::Engine.load_seed
