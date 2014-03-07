@@ -1490,3 +1490,58 @@ height: 166px;
     padding: 18px 9px;
     line-height: 1.2em;  
 }
+
+/********************************** ***************************
+Signup styles 
+*************************************************************/
+
+.signup-container {
+	background: #fff;
+	margin-top: 95px;
+	min-height: 520px;
+}
+
+.signup-form-input {
+	border-radius: 10px !important;
+	height: 20px !important;
+	border: 1px solid #aacfe4 !important;
+}
+
+.signup-form-txt-area {
+	border-radius: 10px !important;
+	height: 50px !important;
+	border: 1px solid #aacfe4 !important;
+}
+
+.string_field:after,
+.string_field:before,
+.message_field:after,
+.message_field:before {
+	display: table;
+	content: "";
+	clear: both;
+}
+
+.string_field > ul > li,
+.message_field > ul > li {
+	float: left;
+	list-style: none;
+	width: 150px;
+}
+
+.webinar {
+	width: 350px;
+	display: block;
+	margin: 8px 25px 15px;
+	font-weight: bold;
+}
+
+.actions > input {
+	margin-left: 290px;
+	padding: 5px;
+	border: 1px solid #ccc;
+}
+
+#new_sign_up {
+	margin: 0 auto;
+}
