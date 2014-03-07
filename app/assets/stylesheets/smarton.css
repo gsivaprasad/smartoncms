@@ -1539,7 +1539,9 @@ Signup styles
 .actions > input {
 	margin-left: 290px;
 	padding: 5px;
-	border: 1px solid #ccc;
+	border: 1px solid #456393;
+	border-radius: 5px;
+        background: #477CD0;
 }
 
 #new_sign_up {
