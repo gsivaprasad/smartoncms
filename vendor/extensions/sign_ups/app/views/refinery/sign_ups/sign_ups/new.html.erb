@@ -13,28 +13,28 @@
       <div class='field name_field string_field'>
         <ul>
           <li><%= f.required_label :name %></li>
-          <li><%= f.text_field :name , :class=>"signup-form-input" %></li>
+          <li><%= f.text_field :name , :class=>"signup-form-input" , :required => 'required'%></li>
         </ul>
       </div>
 
       <div class='field email_field string_field'>
         <ul>
-          <li><%= f.label :email %></li>
-          <li><%= f.text_field :email, :class=>"signup-form-input" %></li>
+          <li><%= f.required_label :email %></li>
+          <li><%= f.email_field :email, :class=>"signup-form-input" , :required => 'required' %></li>
         </ul>
       </div>
 
       <div class='field country_field string_field'>
         <ul>
           <li><%= f.label :country %></li>
-          <li><%= f.text_field :country, :class=>"signup-form-input" %></li>
+          <li><%= f.text_field :country, :class=>"signup-form-input" , :onKeyPress => "return TextCharKeyPress(event);" , :MaxLength=> 25 %></li>
         </ul>
       </div>
 
       <div class='field city_field string_field'>
         <ul>
           <li><%= f.label :city %></li>
-          <li><%= f.text_field :city, :class=>"signup-form-input" %></li>
+          <li><%= f.text_field :city, :class=>"signup-form-input" , :onKeyPress => "return TextCharKeyPress(event);" , :MaxLength=> 25 %></li>
         </ul>
       </div>
 

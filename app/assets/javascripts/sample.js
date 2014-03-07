@@ -34,3 +34,9 @@ function NumericCharKeyPress(evt){
   return true;
 }
 
+function TextCharKeyPress(evt){
+  var charCode = (evt.which) ? evt.which : event.keyCode;  
+  if (charCode == 8 || (charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123))
+    return true;
+  return false;
+}
