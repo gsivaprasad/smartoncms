@@ -40,7 +40,7 @@
 
       <div class='field occupation_field string_field'>
         <ul>
-          <li><%= f.label :occupation %></li>
+          <li><%= f.required_label :occupation %></li>
           <li><%= f.select :occupation, options_for_select(["Student", "Entrepreneur", "Working Professional", "Not working currently", "Others"]), :class => 'genForm_dropBox' %></li>
         </ul>
       </div>
