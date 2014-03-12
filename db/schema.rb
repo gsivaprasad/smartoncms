@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140306105340) do
+ActiveRecord::Schema.define(:version => 20140312091441) do
 
   create_table "refinery_images", :force => true do |t|
     t.string   "image_mime_type"
@@ -141,8 +141,9 @@ ActiveRecord::Schema.define(:version => 20140306105340) do
     t.string   "city"
     t.string   "occupation"
     t.text     "message"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.string   "source_from"
   end
 
   add_index "refinery_sign_ups", ["id"], :name => "index_refinery_sign_ups_on_id"

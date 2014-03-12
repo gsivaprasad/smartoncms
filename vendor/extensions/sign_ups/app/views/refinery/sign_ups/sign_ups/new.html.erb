@@ -26,15 +26,15 @@
 
       <div class='field country_field string_field'>
         <ul>
-          <li><%= f.label :country %></li>
-          <li><%= f.text_field :country, :class=>"signup-form-input" , :onKeyPress => "return TextCharKeyPress(event);" , :MaxLength=> 25 %></li>
+          <li><%= f.required_label :country %></li>
+          <li><%= f.text_field :country, :class=>"signup-form-input" , :onKeyPress => "return TextCharKeyPress(event);" , :MaxLength=> 25 , :required => 'required'%></li>
         </ul>
       </div>
 
       <div class='field city_field string_field'>
         <ul>
-          <li><%= f.label :city %></li>
-          <li><%= f.text_field :city, :class=>"signup-form-input" , :onKeyPress => "return TextCharKeyPress(event);" , :MaxLength=> 25 %></li>
+          <li><%= f.required_label :city %></li>
+          <li><%= f.text_field :city, :class=>"signup-form-input" , :onKeyPress => "return TextCharKeyPress(event);" , :MaxLength=> 25 , :required => 'required'%></li>
         </ul>
       </div>
 
@@ -44,6 +44,15 @@
           <li><%= f.select :occupation, options_for_select(["Student", "Entrepreneur", "Working Professional", "Not working currently", "Others"]), :class => 'genForm_dropBox' %></li>
         </ul>
       </div>
+      <div class='field message_field text_field'>  
+          <span class="webinar">How did you hear about the Webinar?</span>
+      </div>
+      <div class='field occupation_field string_field'>
+        <ul>
+          <li><label>Source</label></li>
+          <li><%= f.select :source_from, options_for_select(["I am a participant of the MOOC", "Through Facebook", "Through Twitter", "Through Linkedin", "Through a friend or acquaintance"]), :class => 'genForm_dropBox' %></li>
+        </ul>
+      </div>     
       <div class='field message_field text_field'>  
           <span class="webinar">I want to attend the webinar because:</span>
       </div>
