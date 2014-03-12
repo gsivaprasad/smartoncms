@@ -41,7 +41,16 @@
       <div class='field occupation_field string_field'>
         <ul>
           <li><%= f.required_label :occupation %></li>
-          <li><%= f.select :occupation, options_for_select(["Student", "Entrepreneur", "Working Professional", "Not working currently", "Others"]), :class => 'genForm_dropBox' %></li>
+          <li> <select name="sign_up[occupation]" required>
+              <option value="">Choose One</option>
+              <option value="Student">Student</option>
+              <option value="Entrepreneur">Entrepreneur</option>
+              <option value="Working Professional">Working Professional</option>
+              <option value="Not working currently">Not working currently</option>
+              <option value="Others">Others</option>
+            </select>
+<%#= f.select :occupation, options_for_select(["Student", "Entrepreneur", "Working Professional", "Not working currently", "Others"]), :prompt => "Select one" , :class => 'genForm_dropBox'%></li>
+          
         </ul>
       </div>
       <div class='field message_field text_field'>  
@@ -49,8 +58,17 @@
       </div>
       <div class='field occupation_field string_field'>
         <ul>
-          <li><label>Source</label></li>
-          <li><%= f.select :source_from, options_for_select(["I am a participant of the MOOC", "Through Facebook", "Through Twitter", "Through Linkedin", "Through a friend or acquaintance"]), :class => 'genForm_dropBox' %></li>
+          <li><%= f.required_label :source_from %></li>
+          <li><select name="sign_up[source_from]" required>
+              <option value="">Choose One</option>
+              <option value="I am a participant of the MOOC">I am a participant of the MOOC</option>
+              <option value="Through Facebook">Through Facebook</option>
+              <option value="Through Twitter">Through Twitter</option>
+              <option value="Through Linkedin">Through Linkedin</option>
+              <option value="Through a friend or acquaintance">Through a friend or acquaintance</option>
+            </select>
+            
+<%#= f.select :source_from, options_for_select(["I am a participant of the MOOC", "Through Facebook", "Through Twitter", "Through Linkedin", "Through a friend or acquaintance"]), :class => 'genForm_dropBox' %></li>
         </ul>
       </div>     
       <div class='field message_field text_field'>  
