@@ -52,6 +52,16 @@
         </td>
       </tr>
       <tr>
+        <td>
+          <strong>
+            <%= t('.source_from', :default => t('activerecord.attributes.sign_up.source_from')) %>
+          </strong>
+        </td>
+        <td>
+          <%= @sign_up.source_from %>
+        </td>
+      </tr>
+      <tr>
         <td valign='top'>
           <strong>
             <%= t('.message', :default => t('activerecord.attributes.sign_up.message')) %>
